@@ -1,0 +1,22 @@
+{
+  "name": "easyevents",
+  "version": "1.0.0",
+  "description": "Easy to use DOM events library for JavaScript.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ankerpeet/easyevents.git"
+  },
+  "keywords": [
+    "ui"
+  ],
+  "author": "Anker Peet",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ankerpeet/easyevents/issues"
+  },
+  "homepage": "https://github.com/ankerpeet/easyevents#readme"
+}
