@@ -1,13 +1,13 @@
-# About EasyEvents
+# About EasyDom
 
-EasyEvents makes attaching and unattaching events to DOM elements.
+EasyDom makes attaching and unattaching events to DOM elements easy.
 
 ---
 ## Installation
 
 1. Install with NPM
    ```sh
-   npm install easyevents
+   npm install easy-dom
    ```
 
 2. Or include links to the CDN in your HTML
@@ -18,12 +18,12 @@ EasyEvents makes attaching and unattaching events to DOM elements.
 ---
 ## Usage
 
-1. In EasyEvents, we keep everything within an object called the Dom object. To start out instantiate a new Dom object.
+1. In EasyDom, we keep everything within an object called the Dom object. To start out instantiate a new Dom object.
 ```javascript
 var dom = new Dom();
 ```
 
-EasyEvents is set up to be used as either a CDN, or as an NPM package that you can install and bundle with your application.
+EasyDom is set up to be used as either a CDN, or as an NPM package that you can install and bundle with your application.
 
 Here is an example of how to create a basic HTML document that uses the CDN to attach events to DOM elements:
 
@@ -32,7 +32,7 @@ Here is an example of how to create a basic HTML document that uses the CDN to a
 <html>
     <head>
         <meta charset="utf-8" />
-        <title>EasyEvents Sample App</title>
+        <title>EasyDom Sample App</title>
     </head>
     <body>
         <div id="container" class="container">

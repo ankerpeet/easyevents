@@ -7,6 +7,36 @@ function Dom (){
     function DomElement(elements) {
         var self = this;
         self.elements = elements;
+        self.css = function(prop, value) {
+            if(self.elements.length != undefined) {
+                for(var i = 0; i < self.elements.length; i++) {  
+                    _updateCSS(elements[i], prop, value);
+                }
+            }
+            else {
+                _updateCSS(elements, prop, value);
+            }
+        }
+        self.addClass = function(className) {
+            if(self.elements.length != undefined) {
+                for(var i = 0; i < self.elements.length; i++) {  
+                    _addClass(elements[i], className);
+                }
+            }
+            else {
+                _addClass(elements, className);
+            }
+        }
+        self.removeClass = function(className) {
+            if(self.elements.length != undefined) {
+                for(var i = 0; i < self.elements.length; i++) {  
+                    _removeClass(elements[i], className);
+                }
+            }
+            else {
+                _removeClass(elements, className);
+            }
+        }
         self.eventNames = ["mousedown", "mouseenter", "mouseleave", "mousemove", "mouseover", 
                            "mouseout", "mouseup", "touchcancel", "touchend", "touchmove", "touchstart"];
         (function() {     
@@ -14,6 +44,23 @@ function Dom (){
                 self[self.eventNames[i]] = new DomEvent(self.eventNames[i], elements);
             }
         })();
+    }
+
+    function _addClass(element, className) {
+        element.classList.add(className);
+    }
+
+    function _removeClass(element, className) {
+        element.classList.remove(className);
+    }
+
+    function _updateCSS(element, prop, value) {
+        if(element.style[prop] != undefined) {
+            element.style[prop] = value;
+        }
+        else {
+            console.error("Invalid CSS property.");
+        }
     }
   
     function DomEvent(name, elements) {
