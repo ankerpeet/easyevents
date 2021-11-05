@@ -10,31 +10,31 @@ function Dom (){
         self.css = function(prop, value) {
             if(self.elements.length != undefined) {
                 for(var i = 0; i < self.elements.length; i++) {  
-                    _updateCSS(elements[i], prop, value);
+                    this._updateCSS(elements[i], prop, value);
                 }
             }
             else {
-                _updateCSS(elements, prop, value);
+                this._updateCSS(elements, prop, value);
             }
         }
         self.addClass = function(className) {
             if(self.elements.length != undefined) {
                 for(var i = 0; i < self.elements.length; i++) {  
-                    _addClass(elements[i], className);
+                    this._addClass(elements[i], className);
                 }
             }
             else {
-                _addClass(elements, className);
+                this._addClass(elements, className);
             }
         }
         self.removeClass = function(className) {
             if(self.elements.length != undefined) {
                 for(var i = 0; i < self.elements.length; i++) {  
-                    _removeClass(elements[i], className);
+                    this._removeClass(elements[i], className);
                 }
             }
             else {
-                _removeClass(elements, className);
+                this._removeClass(elements, className);
             }
         }
         self.eventNames = ["mousedown", "mouseenter", "mouseleave", "mousemove", "mouseover", 
@@ -46,15 +46,15 @@ function Dom (){
         })();
     }
 
-    function _addClass(element, className) {
+    this._addClass = function(element, className) {
         element.classList.add(className);
     }
 
-    function _removeClass(element, className) {
+    this._removeClass = function(element, className) {
         element.classList.remove(className);
     }
 
-    function _updateCSS(element, prop, value) {
+    this._updateCSS = function(element, prop, value) {
         if(element.style[prop] != undefined) {
             element.style[prop] = value;
         }
